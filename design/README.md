@@ -4,6 +4,8 @@
 
 ## UI 设计(墨刀绘图)
 
-![](./UI1.png)![](./UI2.png)![](./UI3.png)
-![](./UI4.png)![](./UI5.png)
-![](./UI6.png)![](./UI7.png)
+<img src="./UI1.png" height="600"> <img src="./UI2.png" height="600"> <img src="./UI3.png" height="600">
+
+<img src="./UI4.png" height="600"> <img src="./UI5.png" height="600">
+
+<img src="./UI6.png" height="600"> <img src="./UI7.png" height="600">
