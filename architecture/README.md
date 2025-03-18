@@ -29,11 +29,13 @@ flowchart TB
             Q["腾讯云COS<br>(图片/视频存储)"]
             R["腾讯云CDN<br>(静态资源加速)"]
         end
+        基础设施1 --> 基础设施2
         subgraph 基础设施2
             S["微信云开发静态资源托管"]
             T["腾讯云日志服务"]
             U["微信云监控"]
         end
+        基础设施2 --> 基础设施3
         subgraph 基础设施3
             W["腾讯云消息推送<br>(如订阅消息)"]
         end
@@ -49,6 +51,7 @@ flowchart TB
 
     classDef tech fill:#fff,stroke:#666;
     class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,W tech
+
 
 ```
 
