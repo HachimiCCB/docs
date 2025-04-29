@@ -57,7 +57,7 @@ mindmap
         搜索栏与分类导航 tab-bar
     测试方案
       单元测试
-        Jest(前端)
+        Jest前端
       集成测试
-        Postman
+        github workflow
 ```
