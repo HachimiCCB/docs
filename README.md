@@ -26,35 +26,38 @@ mindmap
     技术栈
       前端
         WXML/WXSS/JavaScript（微信小程序框架）
-        Vant Weapp（UI组件库）
-        Lodash（数据处理）
+        Vue 3 Composition API + uni-app
+        uv-ui（UI组件库）
+        Vue ref/reactive（状态管理）
+        uni-app本地存储（数据处理）
       后端
         微信云开发（数据库/云函数）
-        Node.js
+        json格式爬取数据
       其他工具
         Git（版本控制）
-        Markdown解析库
+        json解析库
+        uni-app 多端适配(小程序/Web/H5)
     功能模块
+      page
       ​菜谱与食材系统
-        菜谱列表展示
-        材料反向查询
-        客人喜好匹配系统
-        价格区间分类
+        菜谱列表展示 cook
+        材料反向查询 cookView
+        客人喜好匹配系统 cookBar
+        价格区间分类 cookBar
       ​采集与商人系统
         采集地图导航
         商人库存监控
         采集效率计算器
       顾客图鉴系统
-        角色图鉴
-        符卡
-        点单要求
-        相关对话
+        角色图鉴 npc
+        符卡 npcItem
+        点单要求 npcItem
+        相关对话 npcItem
       基础功能
-        搜索栏与分类导航
+        搜索栏与分类导航 tab-bar
     测试方案
       单元测试
         Jest(前端)
-        pytest(后端)
       集成测试
         Postman
 ```
