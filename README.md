@@ -22,7 +22,7 @@
 
 ```mermaid
 mindmap
-  root((TodoApp))
+  root((东方夜雀食堂wiki))
     技术栈
       前端
         WXML/WXSS/JavaScript（微信小程序框架）
