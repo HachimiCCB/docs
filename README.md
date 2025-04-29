@@ -36,7 +36,7 @@ mindmap
       其他工具
         Git（版本控制）
         json解析库
-        uni-app 多端适配(小程序/Web/H5)
+        uni-app多端适配(小程序/Web/H5)
     功能模块
       page
       ​菜谱与食材系统
