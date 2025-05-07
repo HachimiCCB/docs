@@ -5,7 +5,7 @@
 根据json数据的格式设计了后端数据库，完成wiki基本数据的存储与关联；在数据基础上拓展账户管理与评论管理的数据库与关联数据库，支持实现简单的账户注册、登录、评论发布删除管理功能。
 ER图如下： 
 <p align="center">
-  <img src="./ERgraph.png" width="750" height="750">
+  <img src="./ERgraph.png" height="750">
 </p>  
 
 #新增接口
