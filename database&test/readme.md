@@ -9,103 +9,103 @@ ER图如下：
 </p>  
 
 #新增接口
-新增账户管理与评论管理相关接口：
-1.用户注册URL​​: /api/register
-    ​​Method​​: POST
-    Request Body​​:
-    {
-        "username": "string",
-        "password": "string"
-    }
-    成功返回样例：
-    {
-        "code": 200,
-        "message": "注册成功",
-        "data": {
-            "user_id": 1,
-            "username": "testuser"
-        }
-    }
-
-2.用户登录​​URL​​: /api/login
-    ​​Method​​: POST
-    Request Body​​:
-    {
-        "username": "string",
-        "password": "string"
-    }
-    成功返回样例：
-    {
-        "code": 200,
-        "message": "登录成功",
-         "data": {
-            "user_id": 1,
-            "username": "testuser"
-        }
-    }
-    失败返回样例：
-    {
-        "code": 401,
-        "message": "用户名或密码错误"
-    }
-
-3.发表评论URL​​: /api/comments
-    ​Method​​: POST
-    Request Body​​:
-    {
-        "content": "这个NPC真有趣"
-    }
-    成功返回样例：
-    {
-        "code": 200,
-        "message": "评论成功",
-        "data": {
-            "comment_id": 1,
-            "user_id": 1,
-            "username": "testuser",
-            "content": "这个NPC真有趣",
-            "created_at": "2023-07-20T10:00:00Z"
-        }
-    }
-    失败返回样例：
-    {
-        "code": 401,
-        "message": "未授权，请先登录"
-    }
-
-4.获取评论列表URL​​: /api/comments
-    Method​​: GET
-    成功返回样例：
-    {
-        "code": 200,
-        "message": "获取成功",
-        "data": [
-        {
-            "comment_id": 1,
-            "user_id": 1,
-            "username": "testuser",
-            "content": "这个NPC真有趣",
-            "created_at": "2023-07-20T10:00:00Z"
-        },
-        {
-            "comment_id": 2,
-            "user_id": 2,
-            "username": "user2",
-            "content": "我也喜欢这个角色",
-            "created_at": "2023-07-20T11:00:00Z"
-        }
-        ]
-    }
-
-5.删除评论URL​​: /api/comments/{comment_id}
-    Method​​: DELETE
-    成功返回样例：
-    {
-        "code": 200,
-        "message": "删除成功"
-    }    
+新增账户管理与评论管理相关接口：  
+1.用户注册URL​​: /api/register  
+    ​​Method​​: POST  
+    Request Body​​:  
+    {  
+        "username": "string",  
+        "password": "string"  
+    }  
+    成功返回样例：  
+    {  
+        "code": 200,  
+        "message": "注册成功",  
+        "data": {  
+            "user_id": 1,  
+            "username": "testuser"  
+        }  
+    }  
+  
+2.用户登录​​URL​​: /api/login  
+    ​​Method​​: POST  
+    Request Body​​:  
+    {  
+        "username": "string",  
+        "password": "string"  
+    }  
+    成功返回样例：  
+    {  
+        "code": 200,  
+        "message": "登录成功",  
+         "data": {  
+            "user_id": 1,  
+            "username": "testuser"  
+        }  
+    }  
+    失败返回样例：  
+    {  
+        "code": 401,  
+        "message": "用户名或密码错误"  
+    }  
+  
+3.发表评论URL​​: /api/comments  
+    ​Method​​: POST  
+    Request Body​​:  
+    {  
+        "content": "这个NPC真有趣"  
+    }  
+    成功返回样例：  
+    {  
+        "code": 200,  
+        "message": "评论成功",  
+        "data": {  
+            "comment_id": 1,  
+            "user_id": 1,  
+            "username": "testuser",  
+            "content": "这个NPC真有趣",  
+            "created_at": "2023-07-20T10:00:00Z"  
+        }  
+    }  
+    失败返回样例：  
+    {  
+        "code": 401,  
+        "message": "未授权，请先登录"    
+    }  
     
-#测试方案
+4.获取评论列表URL​​: /api/comments  
+    Method​​: GET  
+    成功返回样例：  
+    {  
+        "code": 200,  
+        "message": "获取成功",  
+        "data": [  
+        {  
+            "comment_id": 1,  
+            "user_id": 1,  
+            "username": "testuser",  
+            "content": "这个NPC真有趣",  
+            "created_at": "2023-07-20T10:00:00Z"  
+        },  
+        {  
+            "comment_id": 2,  
+            "user_id": 2,  
+            "username": "user2",  
+            "content": "我也喜欢这个角色",  
+            "created_at": "2023-07-20T11:00:00Z"  
+        }  
+        ]  
+    }  
+  
+5.删除评论URL​​: /api/comments/{comment_id}  
+    Method​​: DELETE  
+    成功返回样例：  
+    {  
+        "code": 200,  
+        "message": "删除成功"  
+    }      
+      
+#测试方案  
 📝 H5应用自动化测试文档  
 
 ✨ 测试概述  
