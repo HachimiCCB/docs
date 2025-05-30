@@ -25,19 +25,19 @@ flowchart TB
 
     subgraph 基础设施
         subgraph 基础设施1
-            P["腾讯云 CloudBase<br>(Serverless)"]
-            Q["腾讯云COS<br>(图片/视频存储)"]
-            R["腾讯云CDN<br>(静态资源加速)"]
+            P["阿里云 CloudBase<br>(Serverless)"]
+            Q["阿里云COS<br>(图片/视频存储)"]
+            R["阿里云CDN<br>(静态资源加速)"]
         end
         基础设施1 --> 基础设施2
         subgraph 基础设施2
-            S["微信云开发静态资源托管"]
-            T["腾讯云日志服务"]
-            U["微信云监控"]
+            S["Unicloud开发静态资源托管"]
+            T["阿里云日志服务"]
+            U["阿里云监控"]
         end
         基础设施2 --> 基础设施3
         subgraph 基础设施3
-            W["腾讯云消息推送<br>(如订阅消息)"]
+            W["阿里云消息推送<br>(如订阅消息)"]
         end
     end
 
@@ -53,6 +53,60 @@ flowchart TB
     class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,W tech
 
 
+```
+以下为更新，为防止出错暂时保留老版本
+```mermaid
+flowchart LR
+    subgraph 客户端
+        A["微信小程序 / H5 / App"] -->|HTTP 请求| D
+        C["UniApp + Vue3 + uView"] -->|HTTP 请求| D
+        B["管理后台<br>基于uni-admin或Web维护工具"] -->|HTTP API| D
+    end
+    subgraph 服务端
+        D["Node.js Express/Koa API Server<br>(主后端服务)"] --> E["业务模块"]
+        E --> F["用户认证与会话管理"]
+        E --> G["菜品/饮品信息管理"]
+        E --> H["角色资料与偏好联动"]
+        E --> I["文章发布与评论模块"]
+        E --> J["AI 聊天助手接口封装"]
+        E --> K["标签/筛选/全文搜索"]
+        E --> L["数据统计与分析模块"]
+        D --> M[("本地 MongoDB 数据库")]
+        D --> N["本地缓存（Redis）"]
+        subgraph 云函数
+            O["uniCloud 云函数（Serverless）"]
+            P1["unicloud-db 云数据库"]
+            Q1["uniCloud.uploadFile<br>(图片/封面上传)"]
+        end
+        A --> O
+        O --> P1
+        O --> Q1
+    end
+    subgraph 基础设施
+        subgraph 基础设施1
+            P["阿里云 CloudBase<br>(Serverless)"]
+            Q["阿里云COS<br>(图片/视频存储)"]
+            R["阿里云CDN<br>(静态资源加速)"]
+        end
+        基础设施1 --> 基础设施2
+        subgraph 基础设施2
+            S["Unicloud开发静态资源托管"]
+            T["阿里云日志服务"]
+            U["阿里云监控"]
+        end
+        基础设施2 --> 基础设施3
+        subgraph 基础设施3
+            W["阿里云消息推送<br>(如订阅消息)"]
+        end
+    end
+    P --> D
+    Q --> D
+    R --> D
+    S --> D
+    T --> D
+    U --> D
+    W --> K
+    classDef tech fill:#fff,stroke:#666;
 ```
 
 ## 技术栈选择依据：
